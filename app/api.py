@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Query
-from app.models import QueryRequest
-from app.core import rag_chat_with_memory
-from app.memory import memory
-from app.retrieval import retrieve_with_scores
+from models import QueryRequest
+from core import rag_chat_with_memory
+from memory import memory
+from retrieval import retrieve_with_scores
 
 router = APIRouter()
 
