@@ -15,4 +15,4 @@ embedding_model = HuggingFaceEmbeddings(
     model_kwargs={"device": device}
 )
 
-faiss_store = FAISS.load_local("../faiss_index", embedding_model, allow_dangerous_deserialization=True)
+faiss_store = FAISS.load_local("faiss_index", embedding_model, allow_dangerous_deserialization=True)
