@@ -25,4 +25,6 @@ fastapi
 uvicorn
 pydantic
 langchain-huggingface
-langchain_cohere 
+langchain_cohere
+langchain-openai
+accelerate
