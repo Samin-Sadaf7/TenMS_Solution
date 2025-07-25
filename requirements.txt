@@ -28,3 +28,4 @@ langchain-huggingface
 langchain_cohere
 langchain-openai
 accelerate
+langchain-core 
