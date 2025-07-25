@@ -1,4 +1,4 @@
-from langchain_community.chat_models import ChatCohere 
+from langchain_cohere import ChatCohere 
 
 import os
 # Load from environment
