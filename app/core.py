@@ -1,8 +1,8 @@
-from memory import memory
-from prompt_template import prompt_template
-from retrieval import retrieve_with_scores
-from clients.cohere_client import co
-from clients.llm_client import llm
+from app.memory import memory
+from app.prompt_template import prompt_template
+from app.retrieval import retrieve_with_scores
+from app.clients.cohere_client import co
+from app.clients.llm_client import llm
 from langchain.schema import HumanMessage
 
 def rag_chat_with_memory(query: str) -> str:
