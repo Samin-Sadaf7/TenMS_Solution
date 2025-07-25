@@ -5,7 +5,7 @@ from app.utils import bm25_tokenizer
 def retrieve_with_scores(query: str, k: int = 10):
     # Use public method instead of private method
     retriever = faiss_store.as_retriever(search_kwargs={"k": k})
-    candidate_docs = retriever.get_relevant_documents(query)  # Public method
+    candidate_docs = retriever.invoke(query)  # Public method
     
     candidate_texts = [doc.page_content for doc in candidate_docs]
 

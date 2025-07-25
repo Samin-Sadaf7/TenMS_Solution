@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Query
-from app.models import QueryRequest
+from app.models.QueryRequest import QueryRequest
+from app.models.QueryInput import QueryInput
 from app.core import rag_chat_with_memory
 from app.memory import memory
 from app.retrieval import retrieve_with_scores
@@ -16,7 +17,7 @@ def get_last_two_messages():
     messages = memory.chat_memory.messages[-4:]
     return [{"role": msg.type, "content": msg.content} for msg in messages]
 
-@router.get("/relevant-contexts")
-def get_contexts(query: str = Query(...)):
-    results = retrieve_with_scores(query)
+@router.post("/relevant-contexts")
+def get_contexts(request: QueryInput):
+    results = retrieve_with_scores(request.query)
     return results
