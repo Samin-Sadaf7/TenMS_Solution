@@ -1,6 +1,6 @@
 from rank_bm25 import BM25Okapi
-from vectorstore import faiss_store
-from utils import bm25_tokenizer
+from app.vectorstore import faiss_store
+from app.utils import bm25_tokenizer
 
 def retrieve_with_scores(query: str, k: int = 10):
     retriever = faiss_store.as_retriever(search_kwargs={"k": k})
